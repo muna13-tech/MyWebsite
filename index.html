@@ -14,11 +14,12 @@
       padding: 10px;
       text-align: center;
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+ nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
     nav ul li a {
       color: white;
       text-decoration: none;
@@ -35,13 +36,12 @@
 }
 
 .profile-pic {
-  width: 200px;         /* حجم الصورة */
-  height: 200px;        /* نفس العرض عشان تصير دائرة */
-  border-radius: 50%;   /* يخلي الزوايا دائرية */
-  object-fit:fill;    /* يقص الصورة بشكل مرتب داخل الدائرة */
-  border: 2px solid #333; /* إطار بسيط حول الصورة */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-   margin-left: 20%;
 }
 
 .welcome-text h1 {
@@ -91,20 +91,22 @@
 .site-footer .social-links a:hover {
   text-decoration: underline;
 }
-      @media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .some-container {
+@media (max-width: 600px) {
+  .hero-section {
     flex-direction: column;
-    padding: 10px;
+    text-align: center;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
+  .profile-pic {
+    margin: 0 auto;
+  }
+
+  .welcome-text h1 {
+    font-size: 22px;
+  }
+
+  .welcome-text p {
+    font-size: 18px;
   }
 }
   </style>
@@ -152,5 +154,4 @@
 </footer>
 
     </body>
-
 </html>
