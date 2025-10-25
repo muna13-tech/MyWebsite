@@ -35,13 +35,13 @@
 }
 
 .profile-pic {
-  width: 300px;         /* حجم الصورة */
-  height: 300px;        /* نفس العرض عشان تصير دائرة */
+  width: 200px;         /* حجم الصورة */
+  height: 200px;        /* نفس العرض عشان تصير دائرة */
   border-radius: 50%;   /* يخلي الزوايا دائرية */
   object-fit:fill;    /* يقص الصورة بشكل مرتب داخل الدائرة */
   border: 2px solid #333; /* إطار بسيط حول الصورة */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-   margin-left: 18%;
+   margin-left: 20%;
 }
 
 .welcome-text h1 {
@@ -91,6 +91,22 @@
 .site-footer .social-links a:hover {
   text-decoration: underline;
 }
+      @media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .some-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
   </style>
 
     </head>
@@ -136,4 +152,5 @@
 </footer>
 
     </body>
+
 </html>
